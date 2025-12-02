@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enquero Blinkit – Auth</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Toast Notifications -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- TOP BACKGROUND GRID with ANIMATION -->
+  <div class="bg-items-grid">
+    <div class="bg-column">
+      <!-- row 1 -->
+      <div class="bg-scroll row-1">
+        <div class="bg-track">
+          <div class="bg-tile"><span>🥦</span></div>
+          <div class="bg-tile"><span>🍫</span></div>
+          <div class="bg-tile"><span>🧴</span></div>
+          <div class="bg-tile"><span>🍅</span></div>
+          <div class="bg-tile"><span>🥛</span></div>
+          <div class="bg-tile"><span>🍟</span></div>
+          <div class="bg-tile"><span>🍪</span></div>
+          <div class="bg-tile"><span>🧂</span></div>
+        </div>
+        <div class="bg-track">
+          <div class="bg-tile"><span>🥦</span></div>
+          <div class="bg-tile"><span>🍫</span></div>
+          <div class="bg-tile"><span>🧴</span></div>
+          <div class="bg-tile"><span>🍅</span></div>
+          <div class="bg-tile"><span>🥛</span></div>
+          <div class="bg-tile"><span>🍟</span></div>
+          <div class="bg-tile"><span>🍪</span></div>
+          <div class="bg-tile"><span>🧂</span></div>
+        </div>
+      </div>
+
+      <!-- row 2 -->
+      <div class="bg-scroll row-2">
+        <div class="bg-track">
+          <div class="bg-tile"><span>🧀</span></div>
+          <div class="bg-tile"><span>🍯</span></div>
+          <div class="bg-tile"><span>🥫</span></div>
+          <div class="bg-tile"><span>🍞</span></div>
+          <div class="bg-tile"><span>🧃</span></div>
+          <div class="bg-tile"><span>🍜</span></div>
+          <div class="bg-tile"><span>🍖</span></div>
+          <div class="bg-tile"><span>🥕</span></div>
+        </div>
+        <div class="bg-track">
+          <div class="bg-tile"><span>🧀</span></div>
+          <div class="bg-tile"><span>🍯</span></div>
+          <div class="bg-tile"><span>🥫</span></div>
+          <div class="bg-tile"><span>🍞</span></div>
+          <div class="bg-tile"><span>🧃</span></div>
+          <div class="bg-tile"><span>🍜</span></div>
+          <div class="bg-tile"><span>🍖</span></div>
+          <div class="bg-tile"><span>🥕</span></div>
+        </div>
+      </div>
+
+      <!-- row 3 -->
+      <div class="bg-scroll row-3">
+        <div class="bg-track">
+          <div class="bg-tile"><span>🧊</span></div>
+          <div class="bg-tile"><span>🍦</span></div>
+          <div class="bg-tile"><span>🍕</span></div>
+          <div class="bg-tile"><span>🍗</span></div>
+          <div class="bg-tile"><span>🥨</span></div>
+          <div class="bg-tile"><span>🍇</span></div>
+          <div class="bg-tile"><span>🍊</span></div>
+          <div class="bg-tile"><span>🌶️</span></div>
+        </div>
+        <div class="bg-track">
+          <div class="bg-tile"><span>🧊</span></div>
+          <div class="bg-tile"><span>🍦</span></div>
+          <div class="bg-tile"><span>🍕</span></div>
+          <div class="bg-tile"><span>🍗</span></div>
+          <div class="bg-tile"><span>🥨</span></div>
+          <div class="bg-tile"><span>🍇</span></div>
+          <div class="bg-tile"><span>🍊</span></div>
+          <div class="bg-tile"><span>🌶️</span></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="page-wrapper">
+    <div class="app-container">
+      <!-- AUTH CARD -->
+      <div id="auth-card" class="card auth-card">
+        <div class="brand-row">
+          <div class="brand-icon">EB</div>
+          <div class="brand-text">
+            <span class="brand-title">Enquero Blinkit</span>
+            <span class="brand-sub">India’s last minute app (demo)</span>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-button active" data-form-target="login-form">Login</button>
+          <button class="tab-button" data-form-target="signup-form">Sign up</button>
+        </div>
+
+        <div class="forms-wrapper">
+          <!-- LOGIN -->
+          <form id="login-form" class="form-panel active" autocomplete="off">
+            <h2>Welcome back 👋</h2>
+            <p class="form-subtitle">Log in to continue to Enquero Blinkit.</p>
+
+            <div class="form-group">
+              <label for="login-email">Email</label>
+              <input type="email" id="login-email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <div class="input-with-icon">
+                <input type="password" id="login-password" placeholder="••••••••" required />
+                <button type="button" class="toggle-password" data-target="login-password">👁</button>
+              </div>
+            </div>
+
+            <div class="form-extra">
+              <label class="checkbox">
+                <input type="checkbox" />
+                <span>Keep me signed in</span>
+              </label>
+              <button type="button" class="link-btn" data-form-target="forgot-form">
+                Forgot password?
+              </button>
+            </div>
+
+            <p id="login-error" class="error-message"></p>
+
+            <button type="submit" class="btn primary full">Login</button>
+
+            <p class="switch-text">
+              New here?
+              <button type="button" class="link-btn" data-form-target="signup-form">
+                Create an account
+              </button>
+            </p>
+          </form>
+
+          <!-- SIGN UP -->
+          <form id="signup-form" class="form-panel" autocomplete="off">
+            <h2>Create account ✨</h2>
+            <p class="form-subtitle">Sign up to start using Enquero Blinkit.</p>
+
+            <div class="form-group">
+              <label for="signup-name">Full name</label>
+              <input type="text" id="signup-name" placeholder="John Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="signup-email">Email</label>
+              <input type="email" id="signup-email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="signup-password">Password</label>
+              <div class="input-with-icon">
+                <input
+                  type="password"
+                  id="signup-password"
+                  placeholder="At least 8 characters"
+                  required
+                />
+                <button type="button" class="toggle-password" data-target="signup-password">👁</button>
+              </div>
+              <p class="hint">
+                Must contain 8+ chars, 1 uppercase, 1 number, 1 special character.
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label for="signup-confirm">Confirm password</label>
+              <input type="password" id="signup-confirm" placeholder="Repeat password" required />
+            </div>
+            <p id="signup-error" class="error-message"></p>
+            <p id="signup-success" class="success-message"></p>
+            <button type="submit" class="btn primary full">Create account</button>
+          </form>
+
+          <!-- FORGOT PASSWORD (RESET FORM) -->
+          <form id="forgot-form" class="form-panel" autocomplete="off">
+            <h2>Reset password 🔑</h2>
+            <p class="form-subtitle">
+              Enter your registered email and set a new password.
+            </p>
+
+            <div class="form-group">
+              <label for="forgot-email">Email</label>
+              <input type="email" id="forgot-email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="forgot-password">New password</label>
+              <div class="input-with-icon">
+                <input
+                  type="password"
+                  id="forgot-password"
+                  placeholder="New strong password"
+                  required
+                />
+                <button type="button" class="toggle-password" data-target="forgot-password">👁</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="forgot-confirm">Confirm new password</label>
+              <input
+                type="password"
+                id="forgot-confirm"
+                placeholder="Repeat new password"
+                required
+              />
+            </div>
+
+            <p id="forgot-message" class="success-message"></p>
+            <p id="forgot-error" class="error-message"></p>
+
+            <button type="submit" class="btn primary full">Update password</button>
+
+            <p class="switch-text">
+              Remember now?
+              <button type="button" class="link-btn" data-form-target="login-form">
+                Back to login
+              </button>
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- WELCOME SCREEN (AFTER LOGIN) -->
+      <div id="welcome-screen" class="card welcome-card hidden">
+        <h1>Welcome to Enquero Blinkit🎉</h1>
+        <h2 id="welcome-name">Enquero Blinkit</h2>
+        <p id="welcome-subtext">You are logged in to Enquero Blinkit.</p>
+        <button id="logout-btn" class="btn primary">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
